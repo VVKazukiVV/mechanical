@@ -34,7 +34,6 @@
             margin: 0 auto;
             padding: 0 20px;
         }
-        /* Шапка */
         header {
             background: var(--white);
             border-bottom: 1px solid var(--border);
@@ -75,7 +74,6 @@
             color: var(--text-dark);
             text-decoration: none;
         }
-        /* Главный экран */
         .hero {
             background: linear-gradient(135deg, #eff6ff 0%, #dbeafe 100%);
             padding: 80px 0;
@@ -121,7 +119,6 @@
             font-weight: 600;
             color: var(--text-dark);
         }
-        /* Секции */
         section {
             padding: 70px 0;
         }
@@ -138,7 +135,6 @@
             margin-left: auto;
             margin-right: auto;
         }
-        /* Каталог услуг */
         .services-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
@@ -202,7 +198,6 @@
             background: var(--primary);
             color: var(--white);
         }
-        /* Условия */
         .bg-gray {
             background: var(--bg-light);
         }
@@ -226,7 +221,6 @@
             font-size: 14px;
             color: var(--text-muted);
         }
-        /* Форма заявки */
         .order-wrapper {
             max-width: 600px;
             margin: 0 auto;
@@ -266,7 +260,6 @@
             margin-top: 16px;
             font-weight: 500;
         }
-        /* Контакты */
         footer {
             background: var(--text-dark);
             color: var(--white);
@@ -337,7 +330,179 @@
         <p class="section-subtitle">Выберите подходящую услугу. Точная стоимость запчастей согласовывается до начала ремонта после осмотра техники.</p>
         
         <div class="services-grid">
-            <!-- Услуга 1 -->
             <div class="card">
                 <div>
                     <h3>Выездная диагностика</h3>
+                    <p class="card-desc">Полная аппаратная и программная проверка устройства для выявления точной причины поломки.</p>
+                    <ul class="card-details">
+                        <li><strong>Кому подходит:</strong> частным лицам и офисам при любой неисправности.</li>
+                        <li><strong>Что входит:</strong> выезд мастера, разбор узла, тестирование, составление сметы.</li>
+                        <li><strong>Формат и время:</strong> на территории клиента, 30–40 минут.</li>
+                    </ul>
+                </div>
+                <div class="card-footer">
+                    <div class="price">0 ₽ при ремонте <br><small style="font-size: 13px; color: #64748b; font-weight: 400;">(500 ₽ при отказе от ремонта)</small></div>
+                    <button class="btn-outline" onclick="selectService('Выездная диагностика')">Заказать диагностику</button>
+                </div>
+            </div>
+
+            <div class="card">
+                <div>
+                    <h3>Ремонт крупной бытовой техники</h3>
+                    <p class="card-desc">Восстановление работоспособности стиральных машин, холодильников и посудомоечных машин на месте.</p>
+                    <ul class="card-details">
+                        <li><strong>Кому подходит:</strong> владельцам бытовой техники, которую сложно везти в сервис.</li>
+                        <li><strong>Что входит:</strong> замена насосов, ТЭНов, датчиков, устранение протечек, тест-запуск.</li>
+                        <li><strong>Формат и время:</strong> на дому у клиента, от 1 до 2 часов.</li>
+                    </ul>
+                </div>
+                <div class="card-footer">
+                    <div class="price">от 1 500 ₽ <br><small style="font-size: 13px; color: #64748b; font-weight: 400;">+ стоимость комплектующих</small></div>
+                    <button class="btn-outline" onclick="selectService('Ремонт крупной бытовой техники')">Оформить заявку</button>
+                </div>
+            </div>
+
+            <div class="card">
+                <div>
+                    <h3>Ремонт ноутбуков и ПК</h3>
+                    <p class="card-desc">Устранение перегрева, замена комплектующих, настройка ОС и удаление вирусов на выезде.</p>
+                    <ul class="card-details">
+                        <li><strong>Кому подходит:</strong> удалённым сотрудникам, студентам и малым офисам.</li>
+                        <li><strong>Что входит:</strong> чистка от пыли, замена термопасты, установка SSD/ОЗУ, настройка ПО.</li>
+                        <li><strong>Формат и время:</strong> дома или в офисе, 1–1,5 часа.</li>
+                    </ul>
+                </div>
+                <div class="card-footer">
+                    <div class="price">от 1 200 ₽ <br><small style="font-size: 13px; color: #64748b; font-weight: 400;">фиксированный прайс на работы</small></div>
+                    <button class="btn-outline" onclick="selectService('Ремонт ноутбуков и ПК')">Оформить заявку</button>
+                </div>
+            </div>
+
+            <div class="card">
+                <div>
+                    <h3>Срочный аварийный выезд</h3>
+                    <p class="card-desc">Приоритетный выезд дежурного инженера в течение 45 минут при критических поломках.</p>
+                    <ul class="card-details">
+                        <li><strong>Кому подходит:</strong> при протечке техники, поломке холодильника или рабочего ПК.</li>
+                        <li><strong>Что входит:</strong> экстренный выезд, локализация аварии, базовый ремонт на месте.</li>
+                        <li><strong>Формат и время:</strong> выезд за 45 минут, работа от 1 часа.</li>
+                    </ul>
+                </div>
+                <div class="card-footer">
+                    <div class="price">от 2 200 ₽ <br><small style="font-size: 13px; color: #64748b; font-weight: 400;">включая срочную подачу</small></div>
+                    <button class="btn-outline" onclick="selectService('Срочный аварийный выезд')">Вызвать срочно</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="conditions" class="bg-gray">
+    <div class="container">
+        <h2 class="section-title">Условия работы, оплаты и отмены</h2>
+        <p class="section-subtitle">Прозрачные правила взаимодействия на каждом этапе оказания услуги</p>
+        
+        <div class="conditions-grid">
+            <div class="cond-box">
+                <h4>1. Способы и момент оплаты</h4>
+                <p>Предоплата не требуется. Вы оплачиваете работу только после её завершения, демонстрации исправной техники и подписания акта. Доступна оплата картой через терминал, по СБП, наличными или по счёту для юрлиц.</p>
+            </div>
+            <div class="cond-box">
+                <h4>2. Порядок оказания услуги</h4>
+                <p>Вы оставляете заявку на сайте → оператор связывается за 10 минут для уточнения модели техники → мастер приезжает в согласованное окно, проводит диагностику и называет итоговую цену до начала ремонта.</p>
+            </div>
+            <div class="cond-box">
+                <h4>3. Сроки и зона выезда</h4>
+                <p>Выезд в пределах города осуществляется бесплатно в день обращения (обычный интервал — 2 часа, срочный — до 45 минут). Выезд за пределы города рассчитывается по тарифу 30 ₽/км.</p>
+            </div>
+            <div class="cond-box">
+                <h4>4. Отмена, перенос и гарантия</h4>
+                <p>Вы можете бесплатно отменить или перенести визит не позднее чем за 1 час до приезда мастера по телефону или в мессенджере. На все выполненные работы и установленные детали действует гарантия до 12 месяцев.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="order">
+    <div class="container">
+        <h2 class="section-title">Заявка на выезд мастера</h2>
+        <p class="section-subtitle">Заполните форму — диспетчер перезвонит в течение 10 минут для подтверждения времени визита</p>
+        
+        <div class="order-wrapper">
+            <form id="repairForm" onsubmit="submitForm(event)">
+                <div class="form-group">
+                    <label for="serviceSelect">Выберите услугу *</label>
+                    <select id="serviceSelect" required>
+                        <option value="Выездная диагностика">Выездная диагностика (0 ₽ при ремонте)</option>
+                        <option value="Ремонт крупной бытовой техники">Ремонт крупной бытовой техники (от 1 500 ₽)</option>
+                        <option value="Ремонт ноутбуков и ПК">Ремонт ноутбуков и ПК (от 1 200 ₽)</option>
+                        <option value="Срочный аварийный выезд">Срочный аварийный выезд (от 2 200 ₽)</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="clientName">Ваше имя *</label>
+                    <input type="text" id="clientName" placeholder="Например: Алексей" required>
+                </div>
+                <div class="form-group">
+                    <label for="clientPhone">Телефон для связи *</label>
+                    <input type="tel" id="clientPhone" placeholder="+7 (999) 000-00-00" required>
+                </div>
+                <div class="form-group">
+                    <label for="clientAddress">Район или адрес выезда *</label>
+                    <input type="text" id="clientAddress" placeholder="Улица, дом или станция метро" required>
+                </div>
+                <div class="form-group">
+                    <label for="problemDesc">Тип техники и описание поломки</label>
+                    <textarea id="problemDesc" rows="3" placeholder="Например: Стиральная машина Bosch не сливает воду"></textarea>
+                </div>
+                <p class="form-note">Оплата производится только после осмотра техники и согласования итоговой сметы с мастером.</p>
+                <button type="submit" class="btn" style="width: 100%;">Отправить заявку</button>
+            </form>
+            <div id="successMessage" class="success-msg">
+                Заявка принята! Диспетчер свяжется с вами в течение 10 минут для уточнения деталей и времени приезда мастера.
+            </div>
+        </div>
+    </div>
+</section>
+
+<footer id="contacts">
+    <div class="container">
+        <div class="footer-grid">
+            <div>
+                <h4>ТехМастер Выезд</h4>
+                <p>Выездной сервис ремонта бытовой и компьютерной техники для частных лиц и организаций.</p>
+            </div>
+            <div>
+                <h4>Контакты</h4>
+                <a href="tel:+78125550199">+7 (812) 555-01-99</a>
+                <a href="mailto:info@techmaster-vyezd.ru">info@techmaster-vyezd.ru</a>
+                <p>Базовый пункт: Санкт-Петербург, Лиговский пр., 50</p>
+            </div>
+            <div>
+                <h4>Режим работы и мессенджеры</h4>
+                <p>Приём заявок и выезд: ежедневно с 08:00 до 22:00</p>
+                <p>Telegram / WhatsApp: @techmaster_help</p>
+            </div>
+        </div>
+        <div class="copyright">
+            © 2026 «ТехМастер Выезд». Учебный проект по электронной коммерции.
+        </div>
+    </div>
+</footer>
+
+<script>
+    function selectService(serviceName) {
+        const select = document.getElementById('serviceSelect');
+        select.value = serviceName;
+        document.getElementById('order').scrollIntoView({ behavior: 'smooth' });
+    }
+
+    function submitForm(event) {
+        event.preventDefault();
+        document.getElementById('successMessage').style.display = 'block';
+        document.getElementById('repairForm').reset();
+    }
+</script>
+
+</body>
+</html>
